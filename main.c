@@ -14,7 +14,12 @@ int main(int argc, char **argv){
         fprintf(stderr, "erro: nao foi possivel abrir o arquivo\n");
         exit(1);
     }
-    ler_file(file);
+    int tempo_total;
+    Tarefa tarefas[MAX_TAM];
+    int num_tarefas = 0;
+
+    ler_file(file, &tempo_total, tarefas, &num_tarefas);
+    imprimir_tarefas_teste();
 
     if(strcmp(argv[1], "rate") == 0){
         execucao_rate();

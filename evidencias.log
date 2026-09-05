@@ -70,4 +70,218 @@ In file included from [01m[Kfuncoes.c:4[m[K:
       |               [01;35m[K~~~~~~^~~~[m[K
 [?2004h]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ gcc -Wall -Wextra -o scheduler main.c funcoes.c
 [?2004l[01m[Kfuncoes.c:[m[K In function ‘[01m[Kler_file[m[K’:
-[01m[Kfuncoes.c:6:21:[m[K [01;35m[K
+[01m[Kfuncoes.c:6:21:[m[K [01;35m[KScript started on 2026-09-05 16:02:26-03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="121" LINES="10"]
+[?2004h]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ git pushcommit -m "feat: validacao de argumentos, escolha do algoritmo e abertura do arquivo"[A]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [C[C[C[Cadd .[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccc -Wall -Wextra -o scheduler main.c funcoes.cmake[K[1Ppwdo[C[Cwhoami[2Pdatescript -a evidencias.logdate[K
+[?2004lSat Sep  5 16:02:31 -03 2026
+[?2004h]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ dategit pushcommit -m "feat: validacao de argumentos, escolha do algoritmo e abertura do arquivo"[A]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [C[C[C[Cadd .[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccc -Wall -Wextra -o scheduler main.c funcoes.cmake[K[1Ppwdo[C[Cwhoami
+[?2004lsofiavillela
+[?2004h]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ whoami[2Pdategit pushcommit -m "feat: validacao de argumentos, escolha do algoritmo e abertura do arquivo"[A]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [C[C[C[Cadd .[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccc -Wall -Wextra -o scheduler main.c funcoes.cmake[K[1Ppwdo[C[Cp[C[C
+[?2004l/home/sofiavillela/Escalonamento-de-tarefas-cr-ticas-de-voo
+[?2004h]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ pwdwhoami[2Pdategit pushcommit -m "feat: validacao de argumentos, escolha do algoritmo e abertura do arquivo"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[Kcc -Wall -Wextra -o scheduler main.c funcoes.cmake[Kgcc -Wall -Wextra -o scheduler main.c funcoes.c
+[?2004l[01m[Kfuncoes.c:[m[K In function ‘[01m[Kler_file[m[K’:
+[01m[Kfuncoes.c:11:42:[m[K [01;31m[Kerror: [m[Kbreak statement not within loop or switch
+   11 |     if(fgets(tarefa, 100, file) == NULL) [01;31m[Kbreak[m[K;
+      |                                          [01;31m[K^~~~~[m[K
+[01m[Kfuncoes.c:16:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoken[m[K’ undeclared (first use in this function); did you mean ‘[01m[Ktokens[m[K’?
+   16 |     if([01;31m[Ktoken[m[K[0] == NULL){
+      |        [01;31m[K^~~~~[m[K
+      |        [32m[Ktokens[m[K
+[01m[Kfuncoes.c:16:8:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kfuncoes.c:18:9:[m[K [01;31m[Kerror: [m[Kcontinue statement not within a loop
+   18 |         [01;31m[Kcontinue[m[K;
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[Kfuncoes.c:21:31:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[K[01;32m[Kchar *[m[K[m[K’ from incompatible pointer type ‘[01m[K[01;34m[Kchar * (*)(char * restrict,  const char * restrict)[m[K[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   21 |     for(int i = 1; (tokens[i] [01;31m[K=[m[K strtok, NULL) != NULL; i++){};
+      |                               [01;31m[K^[m[K
+In file included from [01m[Kfuncoes.c:3[m[K:
+[01m[K/usr/include/string.h:388:14:[m[K [01;36m[Knote: [m[K‘[01m[K[01;34m[Kstrtok[m[K[m[K’ declared here
+  388 | extern char *[01;34m[Ks[m[K[01;34m[Kt[m[K[01;34m[Kr[m[K[01;34m[Kt[m[K[01;34m[Ko[m[K[01;34m[Kk[m[K (char *__restrict __s, const char *__restrict __delim)
+      |              [01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[Kfuncoes.c:24:17:[m[K [01;31m[Kerror: [m[Kinvalid initializer
+   24 |     Tarefa t1 = [01;31m[Kmalloc[m[K(sizeof(Tarefa));
+      |                 [01;31m[K^~~~~~[m[K
+[01m[Kfuncoes.c:25:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kt1[m[K’?
+   25 |     if([01;31m[Kt[m[K != NULL){
+      |        [01;31m[K^[m[K
+      |        [32m[Kt1[m[K
+[01m[Kfuncoes.c:26:18:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   26 |         strcpy(t1[01;31m[K->[m[Knome, tokens[1]);
+      |                  [01;31m[K^~[m[K
+[01m[Kfuncoes.c:27:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   27 |         t1[01;31m[K->[m[Kperiodo = strtol(token[2]);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:27:23:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kstrtol[m[K’; expected 3, have 1
+   27 |         t1->periodo = [01;31m[Kstrtol[m[K(token[2]);
+      |                       [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/features.h:539[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33[m[K,
+                 from [01m[K/usr/include/stdio.h:28[m[K,
+                 from [01m[Kfuncoes.c:1[m[K:
+[01m[K/usr/include/stdlib.h:219:17:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 | extern long int [01;36m[K__REDIRECT_NTH[m[K (strtol, (const char *__restrict __nptr,
+      |                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:28:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   28 |         t1[01;31m[K->[m[Kdeadline = strtol(token[3]);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:28:24:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kstrtol[m[K’; expected 3, have 1
+   28 |         t1->deadline = [01;31m[Kstrtol[m[K(token[3]);
+      |                        [01;31m[K^~~~~~[m[K
+[01m[K/usr/include/stdlib.h:219:17:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 | extern long int [01;36m[K__REDIRECT_NTH[m[K (strtol, (const char *__restrict __nptr,
+      |                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:29:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   29 |         t1[01;31m[K->[m[Kburst = strtol(token[4]);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:29:21:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kstrtol[m[K’; expected 3, have 1
+   29 |         t1->burst = [01;31m[Kstrtol[m[K(token[4]);
+      |                     [01;31m[K^~~~~~[m[K
+[01m[K/usr/include/stdlib.h:219:17:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 | extern long int [01;36m[K__REDIRECT_NTH[m[K (strtol, (const char *__restrict __nptr,
+      |                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:31:17:[m[K [01;31m[Kerror: [m[Kinvalid initializer
+   31 |     Tarefa t2 = [01;31m[Kmalloc[m[K(sizeof(Tarefa));
+      |                 [01;31m[K^~~~~~[m[K
+[01m[Kfuncoes.c:32:11:[m[K [01;31m[Kerror: [m[Kinvalid operands to binary != (have ‘[01m[K[01;32m[KTarefa[m[K[m[K’ and ‘[01m[K[01;34m[Kvoid *[m[K[m[K’)
+   32 |     if(t2 [01;31m[K!=[m[K NULL){
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:33:18:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   33 |         strcpy(t2[01;31m[K->[m[Knome, tokens[5]);
+      |                  [01;31m[K^~[m[K
+[01m[Kfuncoes.c:34:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   34 |         t2[01;31m[K->[m[Kperiodo = strtol(token[6], &endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:35:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   35 |         t2[01;31m[K->[m[Kdeadline = strtol(token[7], &endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:36:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   36 |         t2[01;31m[K->[m[Kburst = strtol(token[8], &endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:7:9:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktempo_total[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+    7 |     int [01;35m[Ktempo_total[m[K;
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:[m[K In function ‘[01m[Kimprimir_tarefas_teste[m[K’:
+[01m[Kfuncoes.c:41:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktempo_total[m[K’ undeclared (first use in this function)
+   41 |     printf("tempo_total: %d\n", [01;31m[Ktempo_total[m[K);
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:42:24:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_tarefas[m[K’ undeclared (first use in this function)
+   42 |     for(int i = 0; i < [01;31m[Knum_tarefas[m[K; i++){
+      |                        [01;31m[K^~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:44:19:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarefas[m[K’ undeclared (first use in this function); did you mean ‘[01m[KTarefa[m[K’?
+   44 |                i, [01;31m[Ktarefas[m[K[i].nome, tarefas[i].periodo, tarefas[i].deadline, tarefas[i].burst);
+      |                   [01;31m[K^~~~~~~[m[K
+      |                   [32m[KTarefa[m[K
+[?2004h]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ gcc -Wall -Wextra -o scheduler main.c funcoes.c
+[?2004l[01m[Kfuncoes.c:[m[K In function ‘[01m[Kler_file[m[K’:
+[01m[Kfuncoes.c:21:31:[m[K [01;31m[Kerror: [m[Kassignment to ‘[01m[K[01;32m[Kchar *[m[K[m[K’ from incompatible pointer type ‘[01m[K[01;34m[Kchar * (*)(char * restrict,  const char * restrict)[m[K[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   21 |     for(int i = 1; (tokens[i] [01;31m[K=[m[K strtok, NULL) != NULL; i++){};
+      |                               [01;31m[K^[m[K
+In file included from [01m[Kfuncoes.c:3[m[K:
+[01m[K/usr/include/string.h:388:14:[m[K [01;36m[Knote: [m[K‘[01m[K[01;34m[Kstrtok[m[K[m[K’ declared here
+  388 | extern char *[01;34m[Ks[m[K[01;34m[Kt[m[K[01;34m[Kr[m[K[01;34m[Kt[m[K[01;34m[Ko[m[K[01;34m[Kk[m[K (char *__restrict __s, const char *__restrict __delim)
+      |              [01;34m[K^[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K[01;34m[K~[m[K
+[01m[Kfuncoes.c:24:17:[m[K [01;31m[Kerror: [m[Kinvalid initializer
+   24 |     Tarefa t1 = [01;31m[Kmalloc[m[K(sizeof(Tarefa));
+      |                 [01;31m[K^~~~~~[m[K
+[01m[Kfuncoes.c:25:11:[m[K [01;31m[Kerror: [m[Kinvalid operands to binary != (have ‘[01m[K[01;32m[KTarefa[m[K[m[K’ and ‘[01m[K[01;34m[Kvoid *[m[K[m[K’)
+   25 |     if(t1 [01;31m[K!=[m[K NULL){
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:26:18:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   26 |         strcpy(t1[01;31m[K->[m[Knome, tokens[1]);
+      |                  [01;31m[K^~[m[K
+[01m[Kfuncoes.c:27:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   27 |         t1[01;31m[K->[m[Kperiodo = strtol(token[2]&endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:27:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoken[m[K’ undeclared (first use in this function); did you mean ‘[01m[Ktokens[m[K’?
+   27 |         t1->periodo = strtol([01;31m[Ktoken[m[K[2]&endptr, 10);
+      |                              [01;31m[K^~~~~[m[K
+      |                              [32m[Ktokens[m[K
+[01m[Kfuncoes.c:27:30:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kfuncoes.c:27:47:[m[K [01;31m[Kerror: [m[Kpassing argument 2 of ‘[01m[Kstrtol[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   27 |         t1->periodo = strtol(token[2]&endptr, [01;34m[K1[m[K[01;34m[K0[m[K);
+      |                                               [01;34m[K^[m[K[01;34m[K~[m[K
+      |                                               [01;34m[K|[m[K
+      |                                               [01;34m[Kint[m[K
+In file included from [01m[Kfuncoes.c:2[m[K:
+[01m[K/usr/include/stdlib.h:182:43:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[K[01;32m[Kchar ** restrict[m[K[m[K’ but argument is of type ‘[01m[K[01;34m[Kint[m[K[m[K’
+  182 |                         [01;32m[Kc[m[K[01;32m[Kh[m[K[01;32m[Ka[m[K[01;32m[Kr[m[K[01;32m[K [m[K[01;32m[K*[m[K[01;32m[K*[m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Kr[m[K[01;32m[Ke[m[K[01;32m[Ks[m[K[01;32m[Kt[m[K[01;32m[Kr[m[K[01;32m[Ki[m[K[01;32m[Kc[m[K[01;32m[Kt[m[K[01;32m[K [m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Ke[m[K[01;32m[Kn[m[K[01;32m[Kd[m[K[01;32m[Kp[m[K[01;32m[Kt[m[K[01;32m[Kr[m[K, int __base)
+      |                         [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
+[01m[Kfuncoes.c:27:23:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kstrtol[m[K’; expected 3, have 2
+   27 |         t1->periodo = [01;31m[Kstrtol[m[K(token[2]&endptr, 10);
+      |                       [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/features.h:539[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33[m[K,
+                 from [01m[K/usr/include/stdio.h:28[m[K,
+                 from [01m[Kfuncoes.c:1[m[K:
+[01m[K/usr/include/stdlib.h:219:17:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 | extern long int [01;36m[K__REDIRECT_NTH[m[K (strtol, (const char *__restrict __nptr,
+      |                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:28:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   28 |         t1[01;31m[K->[m[Kdeadline = strtol(token[3]&endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:28:48:[m[K [01;31m[Kerror: [m[Kpassing argument 2 of ‘[01m[Kstrtol[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   28 |         t1->deadline = strtol(token[3]&endptr, [01;34m[K1[m[K[01;34m[K0[m[K);
+      |                                                [01;34m[K^[m[K[01;34m[K~[m[K
+      |                                                [01;34m[K|[m[K
+      |                                                [01;34m[Kint[m[K
+[01m[K/usr/include/stdlib.h:182:43:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[K[01;32m[Kchar ** restrict[m[K[m[K’ but argument is of type ‘[01m[K[01;34m[Kint[m[K[m[K’
+  182 |                         [01;32m[Kc[m[K[01;32m[Kh[m[K[01;32m[Ka[m[K[01;32m[Kr[m[K[01;32m[K [m[K[01;32m[K*[m[K[01;32m[K*[m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Kr[m[K[01;32m[Ke[m[K[01;32m[Ks[m[K[01;32m[Kt[m[K[01;32m[Kr[m[K[01;32m[Ki[m[K[01;32m[Kc[m[K[01;32m[Kt[m[K[01;32m[K [m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Ke[m[K[01;32m[Kn[m[K[01;32m[Kd[m[K[01;32m[Kp[m[K[01;32m[Kt[m[K[01;32m[Kr[m[K, int __base)
+      |                         [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
+[01m[Kfuncoes.c:28:24:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kstrtol[m[K’; expected 3, have 2
+   28 |         t1->deadline = [01;31m[Kstrtol[m[K(token[3]&endptr, 10);
+      |                        [01;31m[K^~~~~~[m[K
+[01m[K/usr/include/stdlib.h:219:17:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 | extern long int [01;36m[K__REDIRECT_NTH[m[K (strtol, (const char *__restrict __nptr,
+      |                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:29:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   29 |         t1[01;31m[K->[m[Kburst = strtol(token[4]&endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:29:45:[m[K [01;31m[Kerror: [m[Kpassing argument 2 of ‘[01m[Kstrtol[m[K’ makes pointer from integer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+   29 |         t1->burst = strtol(token[4]&endptr, [01;34m[K1[m[K[01;34m[K0[m[K);
+      |                                             [01;34m[K^[m[K[01;34m[K~[m[K
+      |                                             [01;34m[K|[m[K
+      |                                             [01;34m[Kint[m[K
+[01m[K/usr/include/stdlib.h:182:43:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[K[01;32m[Kchar ** restrict[m[K[m[K’ but argument is of type ‘[01m[K[01;34m[Kint[m[K[m[K’
+  182 |                         [01;32m[Kc[m[K[01;32m[Kh[m[K[01;32m[Ka[m[K[01;32m[Kr[m[K[01;32m[K [m[K[01;32m[K*[m[K[01;32m[K*[m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Kr[m[K[01;32m[Ke[m[K[01;32m[Ks[m[K[01;32m[Kt[m[K[01;32m[Kr[m[K[01;32m[Ki[m[K[01;32m[Kc[m[K[01;32m[Kt[m[K[01;32m[K [m[K[01;32m[K_[m[K[01;32m[K_[m[K[01;32m[Ke[m[K[01;32m[Kn[m[K[01;32m[Kd[m[K[01;32m[Kp[m[K[01;32m[Kt[m[K[01;32m[Kr[m[K, int __base)
+      |                         [01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K^[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K[01;32m[K~[m[K
+[01m[Kfuncoes.c:29:21:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kstrtol[m[K’; expected 3, have 2
+   29 |         t1->burst = [01;31m[Kstrtol[m[K(token[4]&endptr, 10);
+      |                     [01;31m[K^~~~~~[m[K
+[01m[K/usr/include/stdlib.h:219:17:[m[K [01;36m[Knote: [m[Kdeclared here
+  219 | extern long int [01;36m[K__REDIRECT_NTH[m[K (strtol, (const char *__restrict __nptr,
+      |                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:31:17:[m[K [01;31m[Kerror: [m[Kinvalid initializer
+   31 |     Tarefa t2 = [01;31m[Kmalloc[m[K(sizeof(Tarefa));
+      |                 [01;31m[K^~~~~~[m[K
+[01m[Kfuncoes.c:32:11:[m[K [01;31m[Kerror: [m[Kinvalid operands to binary != (have ‘[01m[K[01;32m[KTarefa[m[K[m[K’ and ‘[01m[K[01;34m[Kvoid *[m[K[m[K’)
+   32 |     if(t2 [01;31m[K!=[m[K NULL){
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:33:18:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   33 |         strcpy(t2[01;31m[K->[m[Knome, tokens[5]);
+      |                  [01;31m[K^~[m[K
+[01m[Kfuncoes.c:34:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   34 |         t2[01;31m[K->[m[Kperiodo = strtol(token[6], &endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:35:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   35 |         t2[01;31m[K->[m[Kdeadline = strtol(token[7], &endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:36:11:[m[K [01;31m[Kerror: [m[Kinvalid type argument of ‘[01m[K->[m[K’ (have ‘[01m[KTarefa[m[K’)
+   36 |         t2[01;31m[K->[m[Kburst = strtol(token[8], &endptr, 10);
+      |           [01;31m[K^~[m[K
+[01m[Kfuncoes.c:7:9:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ktempo_total[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wno-unused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+    7 |     int [01;35m[Ktempo_total[m[K;
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:[m[K In function ‘[01m[Kimprimir_tarefas_teste[m[K’:
+[01m[Kfuncoes.c:41:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktempo_total[m[K’ undeclared (first use in this function)
+   41 |     printf("tempo_total: %d\n", [01;31m[Ktempo_total[m[K);
+      |                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:42:24:[m[K [01;31m[Kerror: [m[K‘[01m[Knum_tarefas[m[K’ undeclared (first use in this function)
+   42 |     for(int i = 0; i < [01;31m[Knum_tarefas[m[K; i++){
+      |                        [01;31m[K^~~~~~~~~~~[m[K
+[01m[Kfuncoes.c:44:19:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarefas[m[K’ undeclared (first use in this function); did you mean ‘[01m[KTarefa[m[K’?
+   44 |                i, [01;31m[Ktarefas[m[K[i].nome, tarefas[i].periodo, tarefas[i].deadline, tarefas[i].burst);
+      |                   [01;31m[K^~~~~~~[m[K
+      |                   [32m[KTarefa[m[K
+[?2004h]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-de-tarefas-cr-ticas-de-voo[00m$ [K]0;sofiavillela@SofiaVillel-PC: ~/Escalonamento-de-tarefas-cr-ticas-de-voo[01;32msofiavillela@SofiaVillel-PC[00m:[01;34m~/Escalonamento-d
