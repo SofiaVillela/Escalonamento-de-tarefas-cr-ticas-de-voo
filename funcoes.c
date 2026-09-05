@@ -20,17 +20,43 @@ int ler_file(FILE *file, int *tempo_total, Tarefa tarefas[], int *num_tarefas){
 
         if(primeira_linha){
             *tempo_total = strtol(tokens[0], &endptr, 10);
+            if(endptr == tokens[0] || *endptr != '\0'){
+                fprintf(stderr, "erro: valor nao numerico\n");
+                return 1;
+            }
+            if(*tempo_total <= 0){
+                fprintf(stderr, "erro: numero nao positivo");
+                return 1;
+            }
             primeira_linha = 0;
             continue;
         }
 
         for(int i = 1; i <= 3; i++){
             tokens[i] = strtok(NULL, " ");
+            if(tokens[i] == NULL){
+                fprintf(stderr, "erro: campo faltando");
+                return 1;
+            }
+            
         }
+        int valores[3];
+        for(int i = 1; i <= 3; i++){
+            valores[i - 1] = strtol(tokens[i], &endptr, 10);
+            if(endptr == tokens[i] || *endptr != '\0'){
+                fprintf(stderr, "erro: valor nao numerico\n");
+                return 1;
+            }
+            if(valores[i - 1] <= 0){
+                fprintf(stderr, "erro: numero nao positivo");
+                return 1;
+            }
+        }
+
         strcpy(tarefas[*num_tarefas].nome, tokens[0]);
-        tarefas[*num_tarefas].periodo = strtol(tokens[1], &endptr, 10);
-        tarefas[*num_tarefas].deadline = strtol(tokens[2], &endptr, 10);
-        tarefas[*num_tarefas].burst = strtol(tokens[3], &endptr, 10);
+        tarefas[*num_tarefas].periodo = valores[0];
+        tarefas[*num_tarefas].deadline = valores[1];
+        tarefas[*num_tarefas].burst = valores[2];
         (*num_tarefas)++;
 
     }
