@@ -10,9 +10,17 @@ typedef struct Tarefa{
     int burst;
 }Tarefa;
 
+typedef struct {
+    int restante;
+    int proxima_chegada;
+    int deadline_atual;
+    int perdas;
+    int concluidas;
+} EstadoTarefa;
+
 int ler_file(FILE *file, int *tempo_total, Tarefa tarefas[], int *num_tarefas);
-void execucao_rate();
+void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas);
 void execucao_edf();
-void imprimir_tarefas_teste(void);
+void imprimir_tarefas_teste(int tempo_total, Tarefa tarefas[], int num_tarefas);
 
 #endif
