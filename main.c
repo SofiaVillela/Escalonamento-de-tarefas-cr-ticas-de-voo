@@ -16,6 +16,7 @@ int main(int argc, char **argv){
     }
     int tempo_total;
     Tarefa tarefas[MAX_TAM];
+    EstadoTarefa estado[MAX_TAM];
     int num_tarefas = 0;
 
     if(ler_file(file, &tempo_total, tarefas, &num_tarefas)!= 0){
@@ -25,7 +26,8 @@ int main(int argc, char **argv){
     imprimir_tarefas_teste(tempo_total, tarefas, num_tarefas);
 
     if(strcmp(argv[1], "rate") == 0){
-        execucao_rate(tempo_total, tarefas, num_tarefas);
+        execucao_rate(tempo_total, tarefas, num_tarefas, estado);
+        gravar_saida("rate", tarefas, estado, num_tarefas);
     }
     else if(strcmp(argv[1], "edf") == 0){
         execucao_edf();

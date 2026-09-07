@@ -84,8 +84,7 @@ void imprimir_tarefas_teste(int tempo_total, Tarefa tarefas[], int num_tarefas){
     }
 }
 
-void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas){
-    EstadoTarefa estado[MAX_TAM];
+void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]){
     for(int i = 0; i < num_tarefas; i++){
         estado[i].restante = 0;
         estado[i].proxima_chegada = 0;
@@ -128,5 +127,36 @@ void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas){
 }
 
 void execucao_edf(){
+
+}
+
+void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+        char nome_file[30];
+        sprintf(nome_file, "%s_svv.out", algoritmo);
+
+        FILE *file_saida = fopen(nome_file, "w");
+        if(file_saida == NULL){
+            fprintf(stderr, "erro: nao foi possivel abrir o arquivo\n");
+            return;
+        }
+
+        fprintf(file_saida, "EXECUTION BY %s\n", strcmp(algoritmo, "rate") == 0 ? "RATE" : "EDF");
+            fprintf(file_saida, "\nLOST DEADLINES\n");
+
+        for(int i = 0; i < num_tarefas; i++){
+            fprintf(file_saida, "[%s] %d\n", tarefas[i].nome, estado[i].perdas);
+        }
+
+        fprintf(file_saida, "\nCOMPLETE EXECUTION\n");
+        for(int i = 0; i < num_tarefas; i++){
+            fprintf(file_saida, "[%s] %d\n", tarefas[i].nome, estado[i].concluidas);
+        }
+
+        fprintf(file_saida, "\nKILLED\n");
+        for(int i = 0; i < num_tarefas; i++){
+            fprintf(file_saida, "[%s] %d\n", tarefas[i].nome, estado[i].restante > 0 ? 1 : 0);
+        }
+
+        fclose(file_saida);
 
 }
