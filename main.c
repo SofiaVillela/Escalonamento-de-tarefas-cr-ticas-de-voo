@@ -25,12 +25,27 @@ int main(int argc, char **argv){
 
     imprimir_tarefas_teste(tempo_total, tarefas, num_tarefas);
 
+    Tarefa teste_tarefas[3];
+    strcpy(teste_tarefas[0].nome, "A");
+    teste_tarefas[0].periodo = 10;
+    strcpy(teste_tarefas[1].nome, "B");
+    teste_tarefas[1].periodo = 5;
+    strcpy(teste_tarefas[2].nome, "C");
+    teste_tarefas[2].periodo = 20;
+
+    EstadoTarefa teste_estado[3];
+    teste_estado[0].restante = 3;  
+    teste_estado[1].restante = 0; 
+    teste_estado[2].restante = 5;  
+
+    int resultado = escolher_rate(teste_tarefas, teste_estado, 3);
+    printf("escolhida: %d (esperado: 0)\n", resultado);
     if(strcmp(argv[1], "rate") == 0){
-        execucao_rate(tempo_total, tarefas, num_tarefas, estado);
+        
         gravar_saida("rate", tarefas, estado, num_tarefas);
     }
     else if(strcmp(argv[1], "edf") == 0){
-        execucao_edf();
+       
     }
     else{
         fprintf(stderr, "erro: algoritmo invalido\n");

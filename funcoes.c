@@ -84,51 +84,19 @@ void imprimir_tarefas_teste(int tempo_total, Tarefa tarefas[], int num_tarefas){
     }
 }
 
-void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]){
+int escolher_rate(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+    int escolhida = -1;
     for(int i = 0; i < num_tarefas; i++){
-        estado[i].restante = 0;
-        estado[i].proxima_chegada = 0;
-        estado[i].deadline_atual = 0;
-        estado[i].perdas = 0;
-        estado[i].concluidas = 0;
-    }
-
-    for(int t = 0; t < tempo_total; t++){
-        int escolhida = -1;
-
-        for(int i = 0; i < num_tarefas; i++){
-            if(t == estado[i].proxima_chegada){
-                estado[i].restante = tarefas[i].burst;
-                estado[i].deadline_atual = t + tarefas[i].deadline;
-                estado[i].proxima_chegada += tarefas[i].periodo;
+        if(estado[i].restante > 0){
+            if(escolhida == -1 || tarefas[i].periodo < tarefas[escolhida].periodo){
+                escolhida = i;
             }
-            if(estado[i].restante > 0 && t == estado[i].deadline_atual){
-                estado[i].perdas++;
-                estado[i].restante = 0;
-            }
-            if(estado[i].restante > 0){
-                if(escolhida == -1 || tarefas[i].periodo < tarefas[escolhida].periodo){
-                    escolhida = i;
-                }
-            }
-        }
-
-        if(escolhida != -1){
-            estado[escolhida].restante--;
-            if(estado[escolhida].restante == 0){
-                estado[escolhida].concluidas++;
-            }
-        }
-        else{
-
         }
     }
-    
+    return escolhida;
 }
 
-void execucao_edf(){
 
-}
 
 void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
         char nome_file[30];
