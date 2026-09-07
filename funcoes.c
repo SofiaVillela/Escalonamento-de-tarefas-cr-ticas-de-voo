@@ -96,7 +96,17 @@ int escolher_rate(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
     return escolhida;
 }
 
-
+int escolher_edf(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+    int escolhida = -1;
+    for(int i = 0; i < num_tarefas; i++){
+        if(estado[i].restante > 0){
+            if(escolhida == -1 || estado[i].deadline_atual < estado[escolhida].deadline_atual){
+                escolhida = i;
+            }
+        }
+    }
+    return escolhida;
+}
 
 void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
         char nome_file[30];
