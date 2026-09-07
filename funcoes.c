@@ -83,6 +83,19 @@ void imprimir_tarefas_teste(int tempo_total, Tarefa tarefas[], int num_tarefas){
                i, tarefas[i].nome, tarefas[i].periodo, tarefas[i].deadline, tarefas[i].burst);
     }
 }
+void atualizar_estado(int t, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+    for(int i = 0; i < num_tarefas; i++){
+        if(t == estado[i].proxima_chegada){
+            estado[i].restante = tarefas[i].burst;
+            estado[i].deadline_atual = t + tarefas[i].deadline;
+            estado[i].proxima_chegada += tarefas[i].periodo;
+        }
+        if(estado[i].restante > 0 && t == estado[i].deadline_atual){
+            estado[i].perdas++;
+            estado[i].restante = 0;
+        }
+    }
+}
 
 int escolher_rate(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
     int escolhida = -1;
@@ -96,7 +109,7 @@ int escolher_rate(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
     return escolhida;
 }
 
-int escolher_edf(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+int escolher_edf(EstadoTarefa estado[], int num_tarefas){
     int escolhida = -1;
     for(int i = 0; i < num_tarefas; i++){
         if(estado[i].restante > 0){
