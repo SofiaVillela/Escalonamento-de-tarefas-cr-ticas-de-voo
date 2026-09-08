@@ -58,7 +58,7 @@ int ler_file(FILE *file, int *tempo_total, Tarefa tarefas[], int *num_tarefas){
         }
 
         if(valores[2] > valores[1] || valores[1] > valores[0] || valores[2] > valores[0]){
-            fprintf(stderr, "erro: C <= D ≤<= P violado\n");
+            fprintf(stderr, "erro: C <= D <= P violado\n");
             return 1;
         }
 
@@ -76,13 +76,7 @@ int ler_file(FILE *file, int *tempo_total, Tarefa tarefas[], int *num_tarefas){
     return 0;
 }
 
-void imprimir_tarefas_teste(int tempo_total, Tarefa tarefas[], int num_tarefas){
-    printf("tempo_total: %d\n", tempo_total);
-    for(int i = 0; i < num_tarefas; i++){
-        printf("tarefa %d -> nome: %s, periodo: %d, deadline: %d, burst: %d\n",
-               i, tarefas[i].nome, tarefas[i].periodo, tarefas[i].deadline, tarefas[i].burst);
-    }
-}
+
 void atualizar_estado(int t, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
     for(int i = 0; i < num_tarefas; i++){
         if(t == estado[i].proxima_chegada){

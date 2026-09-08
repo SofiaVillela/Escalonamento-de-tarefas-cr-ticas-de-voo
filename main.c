@@ -23,7 +23,7 @@ int main(int argc, char **argv){
         exit(1);
     }
 
-    imprimir_tarefas_teste(tempo_total, tarefas, num_tarefas);
+
 
     if(strcmp(argv[1], "rate") == 0){
         execucao_rate(tempo_total, tarefas, num_tarefas, estado);
