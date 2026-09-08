@@ -120,6 +120,49 @@ int escolher_edf(EstadoTarefa estado[], int num_tarefas){
     }
     return escolhida;
 }
+void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]){
+    for(int i = 0; i < num_tarefas; i++){
+        estado[i].restante = 0;
+        estado[i].proxima_chegada = 0;
+        estado[i].deadline_atual = 0;
+        estado[i].perdas = 0;
+        estado[i].concluidas = 0;
+    }
+
+    for(int t = 0; t < tempo_total; t++){
+        atualizar_estado(t, tarefas, estado, num_tarefas);
+        int escolhida = escolher_rate(tarefas, estado, num_tarefas);
+
+        if(escolhida != -1){
+            estado[escolhida].restante--;
+            if(estado[escolhida].restante == 0){
+                estado[escolhida].concluidas++;
+            }
+        }
+    }
+}
+
+void execucao_edf(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]){
+    for(int i = 0; i < num_tarefas; i++){
+        estado[i].restante = 0;
+        estado[i].proxima_chegada = 0;
+        estado[i].deadline_atual = 0;
+        estado[i].perdas = 0;
+        estado[i].concluidas = 0;
+    }
+
+    for(int t = 0; t < tempo_total; t++){
+        atualizar_estado(t, tarefas, estado, num_tarefas);
+        int escolhida = escolher_edf(estado, num_tarefas);
+
+        if(escolhida != -1){
+            estado[escolhida].restante--;
+            if(estado[escolhida].restante == 0){
+                estado[escolhida].concluidas++;
+            }
+        }
+    }
+}
 
 void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
         char nome_file[30];

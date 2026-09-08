@@ -24,5 +24,6 @@ void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[]
 int escolher_rate(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas);
 int escolher_edf( EstadoTarefa estado[], int num_tarefas);
 void atualizar_estado(int t, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas);
-
+void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]);
+void execucao_edf(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]);
 #endif

@@ -26,11 +26,12 @@ int main(int argc, char **argv){
     imprimir_tarefas_teste(tempo_total, tarefas, num_tarefas);
 
     if(strcmp(argv[1], "rate") == 0){
-        
+        execucao_rate(tempo_total, tarefas, num_tarefas, estado);
         gravar_saida("rate", tarefas, estado, num_tarefas);
     }
     else if(strcmp(argv[1], "edf") == 0){
-       
+       execucao_edf(tempo_total, tarefas, num_tarefas, estado);
+       gravar_saida("edf", tarefas, estado, num_tarefas);
     }
     else{
         fprintf(stderr, "erro: algoritmo invalido\n");
