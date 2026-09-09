@@ -77,7 +77,7 @@ int ler_file(FILE *file, int *tempo_total, Tarefa *tarefas, int *num_tarefas){
 }
 
 
-void atualizar_estado(int t, Tarefa *tarefas, EstadoTarefa *estado, int num_tarefas){
+void atualizar_estado(int t, Tarefa *tarefas, EstadoTarefa *estado, int num_tarefas, int *perda_em){
     for(int i = 0; i < num_tarefas; i++){
         if(t == estado[i].proxima_chegada){
             estado[i].restante = tarefas[i].burst;
@@ -87,6 +87,7 @@ void atualizar_estado(int t, Tarefa *tarefas, EstadoTarefa *estado, int num_tare
         if(estado[i].restante > 0 && t == estado[i].deadline_atual){
             estado[i].perdas++;
             estado[i].restante = 0;
+            perda_em[t] = i;
         }
     }
 }
@@ -115,6 +116,7 @@ int escolher_edf(EstadoTarefa *estado, int num_tarefas){
     return escolhida;
 }
 void execucao_rate(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou){
+    int perda_em[tempo_total];
     for(int i = 0; i < num_tarefas; i++){
         estado[i].restante = 0;
         estado[i].proxima_chegada = 0;
@@ -122,15 +124,19 @@ void execucao_rate(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTare
         estado[i].perdas = 0;
         estado[i].concluidas = 0;
     }
+    for(int t = 0; t < tempo_total; t++){
+        perda_em[t] = -1;
+    }
 
     for(int t = 0; t < tempo_total; t++){
-        atualizar_estado(t, tarefas, estado, num_tarefas);
+        atualizar_estado(t, tarefas, estado, num_tarefas, perda_em);
         int escolhida = escolher_rate(tarefas, estado, num_tarefas);
         executar(t, escolhida, estado, rodou);
     }
 }
 
 void execucao_edf(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou){
+    int perda_em[tempo_total];
     for(int i = 0; i < num_tarefas; i++){
         estado[i].restante = 0;
         estado[i].proxima_chegada = 0;
@@ -138,9 +144,12 @@ void execucao_edf(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTaref
         estado[i].perdas = 0;
         estado[i].concluidas = 0;
     }
+    for(int t = 0; t < tempo_total; t++){
+        perda_em[t] = -1;
+    }
 
     for(int t = 0; t < tempo_total; t++){
-        atualizar_estado(t, tarefas, estado, num_tarefas);
+        atualizar_estado(t, tarefas, estado, num_tarefas, perda_em);
         int escolhida = escolher_edf(estado, num_tarefas);
         executar(t, escolhida, estado, rodou);
     }
