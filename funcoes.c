@@ -3,7 +3,7 @@
 #include <string.h>
 #include "funcoes.h"
 
-int ler_file(FILE *file, int *tempo_total, Tarefa tarefas[], int *num_tarefas){
+int ler_file(FILE *file, int *tempo_total, Tarefa *tarefas, int *num_tarefas){
     char linha[MAX_TAM];
     char *tokens[10];
     char *endptr;
@@ -77,7 +77,7 @@ int ler_file(FILE *file, int *tempo_total, Tarefa tarefas[], int *num_tarefas){
 }
 
 
-void atualizar_estado(int t, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+void atualizar_estado(int t, Tarefa *tarefas, EstadoTarefa *estado, int num_tarefas){
     for(int i = 0; i < num_tarefas; i++){
         if(t == estado[i].proxima_chegada){
             estado[i].restante = tarefas[i].burst;
@@ -91,7 +91,7 @@ void atualizar_estado(int t, Tarefa tarefas[], EstadoTarefa estado[], int num_ta
     }
 }
 
-int escolher_rate(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+int escolher_rate(Tarefa *tarefas, EstadoTarefa *estado, int num_tarefas){
     int escolhida = -1;
     for(int i = 0; i < num_tarefas; i++){
         if(estado[i].restante > 0){
@@ -103,7 +103,7 @@ int escolher_rate(Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
     return escolhida;
 }
 
-int escolher_edf(EstadoTarefa estado[], int num_tarefas){
+int escolher_edf(EstadoTarefa *estado, int num_tarefas){
     int escolhida = -1;
     for(int i = 0; i < num_tarefas; i++){
         if(estado[i].restante > 0){
@@ -114,7 +114,7 @@ int escolher_edf(EstadoTarefa estado[], int num_tarefas){
     }
     return escolhida;
 }
-void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]){
+void execucao_rate(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou){
     for(int i = 0; i < num_tarefas; i++){
         estado[i].restante = 0;
         estado[i].proxima_chegada = 0;
@@ -126,17 +126,11 @@ void execucao_rate(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTar
     for(int t = 0; t < tempo_total; t++){
         atualizar_estado(t, tarefas, estado, num_tarefas);
         int escolhida = escolher_rate(tarefas, estado, num_tarefas);
-
-        if(escolhida != -1){
-            estado[escolhida].restante--;
-            if(estado[escolhida].restante == 0){
-                estado[escolhida].concluidas++;
-            }
-        }
+        executar(t, escolhida, estado, rodou);
     }
 }
 
-void execucao_edf(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTarefa estado[]){
+void execucao_edf(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou){
     for(int i = 0; i < num_tarefas; i++){
         estado[i].restante = 0;
         estado[i].proxima_chegada = 0;
@@ -148,17 +142,11 @@ void execucao_edf(int tempo_total, Tarefa tarefas[], int num_tarefas, EstadoTare
     for(int t = 0; t < tempo_total; t++){
         atualizar_estado(t, tarefas, estado, num_tarefas);
         int escolhida = escolher_edf(estado, num_tarefas);
-
-        if(escolhida != -1){
-            estado[escolhida].restante--;
-            if(estado[escolhida].restante == 0){
-                estado[escolhida].concluidas++;
-            }
-        }
+        executar(t, escolhida, estado, rodou);
     }
 }
 
-void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[], int num_tarefas){
+void gravar_saida(const char *algoritmo, Tarefa *tarefas, EstadoTarefa *estado, int num_tarefas, int *rodou, int tempo_total){
         char nome_file[30];
         sprintf(nome_file, "%s_svv.out", algoritmo);
 
@@ -169,6 +157,7 @@ void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[]
         }
 
         fprintf(file_saida, "EXECUTION BY %s\n", strcmp(algoritmo, "rate") == 0 ? "RATE" : "EDF");
+        imprimir_execucao(file_saida, tarefas, rodou, tempo_total);
             fprintf(file_saida, "\nLOST DEADLINES\n");
 
         for(int i = 0; i < num_tarefas; i++){
@@ -187,4 +176,32 @@ void gravar_saida(const char *algoritmo, Tarefa tarefas[], EstadoTarefa estado[]
 
         fclose(file_saida);
 
+}
+void executar(int t, int escolhida, EstadoTarefa *estado, int *rodou){
+    rodou[t] = escolhida;
+
+    if(escolhida != -1){
+        estado[escolhida].restante--;
+        if(estado[escolhida].restante == 0){
+            estado[escolhida].concluidas++;
+        }
+    }
+}
+
+void imprimir_execucao(FILE *file_saida, Tarefa tarefas[], int quem_rodou[], int tempo_total){
+    int inicio = 0;
+    while(inicio < tempo_total){
+        int atual = quem_rodou[inicio];
+        int fim = inicio;
+        while(fim < tempo_total && quem_rodou[fim] == atual){
+            fim++;
+        }
+        int duracao = fim - inicio;
+        if(atual == -1){
+            fprintf(file_saida, "idle for %d units\n", duracao);
+        } else {
+            fprintf(file_saida, "[%s] for %d units\n", tarefas[atual].nome, duracao);
+        }
+        inicio = fim;
+    }
 }

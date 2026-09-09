@@ -23,15 +23,15 @@ int main(int argc, char **argv){
         exit(1);
     }
 
-
+    int rodou[tempo_total];
 
     if(strcmp(argv[1], "rate") == 0){
-        execucao_rate(tempo_total, tarefas, num_tarefas, estado);
-        gravar_saida("rate", tarefas, estado, num_tarefas);
+        execucao_rate(tempo_total, tarefas, num_tarefas, estado, rodou);
+        gravar_saida("rate", tarefas, estado, num_tarefas, rodou,  tempo_total);
     }
     else if(strcmp(argv[1], "edf") == 0){
-       execucao_edf(tempo_total, tarefas, num_tarefas, estado);
-       gravar_saida("edf", tarefas, estado, num_tarefas);
+       execucao_edf(tempo_total, tarefas, num_tarefas, estado, rodou);
+       gravar_saida("edf", tarefas, estado, num_tarefas, rodou, tempo_total);
     }
     else{
         fprintf(stderr, "erro: algoritmo invalido\n");
