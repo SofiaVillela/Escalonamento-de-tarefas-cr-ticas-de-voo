@@ -115,8 +115,7 @@ int escolher_edf(EstadoTarefa *estado, int num_tarefas){
     }
     return escolhida;
 }
-void execucao_rate(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou){
-    int perda_em[tempo_total];
+void execucao_rate(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou, int *perda_em, int *concluiu_em){
     for(int i = 0; i < num_tarefas; i++){
         estado[i].restante = 0;
         estado[i].proxima_chegada = 0;
@@ -126,12 +125,13 @@ void execucao_rate(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTare
     }
     for(int t = 0; t < tempo_total; t++){
         perda_em[t] = -1;
+        concluiu_em[t] = -1;
     }
 
     for(int t = 0; t < tempo_total; t++){
         atualizar_estado(t, tarefas, estado, num_tarefas, perda_em);
         int escolhida = escolher_rate(tarefas, estado, num_tarefas);
-        executar(t, escolhida, estado, rodou);
+        executar(t, escolhida, estado, rodou, concluiu_em);
     }
 }
 
@@ -146,12 +146,13 @@ void execucao_edf(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTaref
     }
     for(int t = 0; t < tempo_total; t++){
         perda_em[t] = -1;
+        concluiu_em[t] = -1;
     }
 
     for(int t = 0; t < tempo_total; t++){
         atualizar_estado(t, tarefas, estado, num_tarefas, perda_em);
         int escolhida = escolher_edf(estado, num_tarefas);
-        executar(t, escolhida, estado, rodou);
+        executar(t, escolhida, estado, rodou, concluiu_em);
     }
 }
 
@@ -186,13 +187,13 @@ void gravar_saida(const char *algoritmo, Tarefa *tarefas, EstadoTarefa *estado, 
         fclose(file_saida);
 
 }
-void executar(int t, int escolhida, EstadoTarefa *estado, int *rodou){
+void executar(int t, int escolhida, EstadoTarefa *estado, int *rodou, int *concluiu_em){
     rodou[t] = escolhida;
-
     if(escolhida != -1){
         estado[escolhida].restante--;
         if(estado[escolhida].restante == 0){
             estado[escolhida].concluidas++;
+            concluiu_em[t] = escolhida;
         }
     }
 }
