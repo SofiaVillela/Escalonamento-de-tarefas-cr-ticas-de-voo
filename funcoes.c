@@ -11,7 +11,7 @@ int ler_file(FILE *file, int *tempo_total, Tarefa *tarefas, int *num_tarefas){
 
     while(fgets(linha, sizeof(linha), file) != NULL){
         if(*num_tarefas >= MAX_TAM){
-            fprintf(stderr, "erro: max de tarefas atingido");
+            fprintf(stderr, "erro: max de tarefas atingido\n");
             return 1;
         }
         size_t len = strlen(linha);
@@ -70,7 +70,7 @@ int ler_file(FILE *file, int *tempo_total, Tarefa *tarefas, int *num_tarefas){
 
     }
     if(primeira_linha == 1){
-        fprintf(stderr, "erro: nenhuma linha valida");
+        fprintf(stderr, "erro: nenhuma linha valida\n");
         return 1;
     }
     return 0;
