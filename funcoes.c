@@ -135,8 +135,8 @@ void execucao_rate(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTare
     }
 }
 
-void execucao_edf(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou){
-    int perda_em[tempo_total];
+void execucao_edf(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTarefa *estado, int *rodou, int *perda_em, int *concluiu_em){
+
     for(int i = 0; i < num_tarefas; i++){
         estado[i].restante = 0;
         estado[i].proxima_chegada = 0;
@@ -156,7 +156,7 @@ void execucao_edf(int tempo_total, Tarefa *tarefas, int num_tarefas, EstadoTaref
     }
 }
 
-void gravar_saida(const char *algoritmo, Tarefa *tarefas, EstadoTarefa *estado, int num_tarefas, int *rodou, int tempo_total){
+void gravar_saida(const char *algoritmo, Tarefa *tarefas, EstadoTarefa *estado, int num_tarefas, int *rodou, int *perda_em, int *concluiu_em, int tempo_total){
         char nome_file[30];
         sprintf(nome_file, "%s_svv.out", algoritmo);
 
@@ -167,7 +167,7 @@ void gravar_saida(const char *algoritmo, Tarefa *tarefas, EstadoTarefa *estado, 
         }
 
         fprintf(file_saida, "EXECUTION BY %s\n", strcmp(algoritmo, "rate") == 0 ? "RATE" : "EDF");
-        imprimir_execucao(file_saida, tarefas, rodou, tempo_total);
+        imprimir_execucao(file_saida, tarefas, rodou, perda_em, concluiu_em, tempo_total);
             fprintf(file_saida, "\nLOST DEADLINES\n");
 
         for(int i = 0; i < num_tarefas; i++){
@@ -198,7 +198,7 @@ void executar(int t, int escolhida, EstadoTarefa *estado, int *rodou, int *concl
     }
 }
 
-void imprimir_execucao(FILE *file_saida, Tarefa tarefas[], int quem_rodou[], int tempo_total){
+void imprimir_execucao(FILE *file_saida, Tarefa tarefas[], int quem_rodou[], int perda_em[], int concluiu_em[], int tempo_total){
     int inicio = 0;
     while(inicio < tempo_total){
         int atual = quem_rodou[inicio];
@@ -210,7 +210,15 @@ void imprimir_execucao(FILE *file_saida, Tarefa tarefas[], int quem_rodou[], int
         if(atual == -1){
             fprintf(file_saida, "idle for %d units\n", duracao);
         } else {
-            fprintf(file_saida, "[%s] for %d units\n", tarefas[atual].nome, duracao);
+            char letra;
+            if(concluiu_em[fim - 1] == atual){
+                letra = 'F';
+            } else if(fim < tempo_total && perda_em[fim] == atual){
+                letra = 'L';
+            } else {
+                letra = 'H';
+            }
+            fprintf(file_saida, "[%s] for %d units - %c\n", tarefas[atual].nome, duracao, letra);
         }
         inicio = fim;
     }

@@ -31,11 +31,11 @@ int main(int argc, char **argv){
 
     if(strcmp(argv[1], "rate") == 0){
         execucao_rate(tempo_total, tarefas, num_tarefas, estado, rodou, perda_em, concluiu_em);
-        gravar_saida("rate", tarefas, estado, num_tarefas, rodou,  tempo_total);
+        gravar_saida("rate", tarefas, estado, num_tarefas, rodou, perda_em, concluiu_em, tempo_total);
     }
     else if(strcmp(argv[1], "edf") == 0){
        execucao_edf(tempo_total, tarefas, num_tarefas, estado, rodou, perda_em, concluiu_em);
-       gravar_saida("edf", tarefas, estado, num_tarefas, rodou, tempo_total);
+       gravar_saida("edf", tarefas, estado, num_tarefas, rodou, perda_em, concluiu_em, tempo_total);
     }
     else{
         fprintf(stderr, "erro: algoritmo invalido\n");
